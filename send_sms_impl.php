@@ -37,7 +37,7 @@ class SendSMSImpl implements SendSMS{
 
 	public function sendText($body, $token) {
 
-		$url = 'https://esms.dialog.lk/api/v1/sms';
+		$url = 'https://esms.dialog.lk/api/v2/sms';
 		$data = json_encode($body);
 
 		$headers = array(
@@ -67,7 +67,7 @@ class SendSMSImpl implements SendSMS{
 
 	public function getTransactionIDStatus($body, $token) {
 
-		$url = 'https://esms.dialog.lk/api/v1/sms/check-transaction';
+		$url = 'https://esms.dialog.lk/api/v2/sms/check-transaction';
 		$data = json_encode($body);
 
 		$headers = array(
