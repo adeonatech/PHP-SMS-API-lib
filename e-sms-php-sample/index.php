@@ -47,7 +47,7 @@
             $sendTextBody->setTransactionId($t);
             $sendTextBody->setMessage('<YOUR_MESSAGE>');
             $transactionBody = new TransactionBody();
-            $transactionBody->setTransactionId($t);
+            $transactionBody->setTransactionId($t+'<RANDOM_NUMBER>');
             $response = $sendSmsImpl->sendText($sendTextBody, $token)->getData()->getUserId();
 
             echo $response;
